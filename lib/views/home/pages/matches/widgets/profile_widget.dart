@@ -9,23 +9,20 @@ class ProfileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 135,
+      width: 135.w,
       child: Stack(
         children: [
           Positioned(
             top: 0,
-            left: 25,
+            left: 25.w,
             right: 0,
             child: Container(
-              height: 20.h,
-              width: 120,
               decoration: BoxDecoration(
                 color: AppColors.profileGrey,
                 borderRadius: BorderRadius.circular(10.r),
               ),
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 4, horizontal: 8.0),
+                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Text(
                   'Angelina, 28',
                   style: AppTexts.titleTextStyle,

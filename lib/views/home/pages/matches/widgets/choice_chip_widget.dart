@@ -23,7 +23,6 @@ class ChoiceChipWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 57.h,
         decoration: BoxDecoration(
           border: Border.all(
             width: 2,
@@ -35,7 +34,7 @@ class ChoiceChipWidget extends StatelessWidget {
           boxShadow: AppColors.choiceChipShadows,
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 13.5),
+          padding: const EdgeInsets.all(10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [

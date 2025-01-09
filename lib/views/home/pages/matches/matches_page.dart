@@ -25,15 +25,16 @@ class MatchesPage extends StatelessWidget {
               softWrap: true,
               overflow: TextOverflow.visible,
             ),
+            AppSpaces.gapH(9),
             GridView.builder(
               shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
+                mainAxisExtent: 67,
                 crossAxisSpacing: 12,
                 mainAxisSpacing: 12,
-                childAspectRatio: 2,
               ),
+              padding: const EdgeInsets.symmetric(vertical: 10),
               itemCount: provider.chipData.length,
               itemBuilder: (context, index) {
                 final chip = provider.chipData[index];

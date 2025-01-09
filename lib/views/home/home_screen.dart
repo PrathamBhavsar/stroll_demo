@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:stroll_demo/constants/app_colors.dart';
@@ -53,7 +54,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             bottomNavigationBar: SizedBox(
-              height: 85,
+              height: 80.h,
               child: Theme(
                 data: Theme.of(context).copyWith(
                   splashColor: AppColors.secondaryColor.withOpacity(0.2),
