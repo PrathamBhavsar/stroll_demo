@@ -29,43 +29,57 @@ class HomeScreen extends StatelessWidget {
           ];
 
           return Scaffold(
-            backgroundColor: Theme.of(context).primaryColor,
-            appBar: AppBar(
-              forceMaterialTransparency: true,
-              title: const Text('Home Screen'),
-            ),
-            body: Padding(
-              padding: AppSpaces.appPadding,
-              child: PageView(
-                controller: pageController,
-                onPageChanged: (index) {
-                  homeProvider.updateIndex(index);
-                },
-                children: pages,
-              ),
+            backgroundColor: Colors.black,
+            body: Stack(
+              children: [
+                if (homeProvider.currentIndex == 0)
+                  Positioned.fill(
+                    child: Image.asset(
+                      'assets/images/matches_background.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                // Your existing PageView
+                Padding(
+                  padding: AppSpaces.appPadding,
+                  child: PageView(
+                    controller: pageController,
+                    onPageChanged: (index) {
+                      homeProvider.updateIndex(index);
+                    },
+                    children: pages,
+                  ),
+                ),
+              ],
             ),
             bottomNavigationBar: SizedBox(
-              height: 80,
-              child: BottomNavigationBar(
-                currentIndex: homeProvider.currentIndex,
-                onTap: (index) {
-                  homeProvider.updateIndex(index);
-                  pageController.animateToPage(
-                    index,
-                    duration: const Duration(milliseconds: 400),
-                    curve: Curves.easeInOut,
-                  );
-                },
-                useLegacyColorScheme: true,
-                type: BottomNavigationBarType.fixed,
-                showUnselectedLabels: false,
-                backgroundColor: Theme.of(context).primaryColor,
-                selectedItemColor: AppColors.secondaryColor,
-                unselectedItemColor: AppColors.accentColor,
-                selectedIconTheme:
-                    const IconThemeData(color: AppColors.secondaryColor),
-                showSelectedLabels: false,
-                items: _buildBottomNavItems(homeProvider),
+              height: 85,
+              child: Theme(
+                data: Theme.of(context).copyWith(
+                  splashColor: AppColors.secondaryColor.withOpacity(0.2),
+                  highlightColor: Colors.transparent,
+                ),
+                child: BottomNavigationBar(
+                  currentIndex: homeProvider.currentIndex,
+                  onTap: (index) {
+                    homeProvider.updateIndex(index);
+                    pageController.animateToPage(
+                      index,
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeInOut,
+                    );
+                  },
+                  useLegacyColorScheme: true,
+                  type: BottomNavigationBarType.fixed,
+                  showUnselectedLabels: false,
+                  backgroundColor: Theme.of(context).primaryColor,
+                  selectedItemColor: AppColors.secondaryColor,
+                  unselectedItemColor: AppColors.accentColor,
+                  selectedIconTheme:
+                      const IconThemeData(color: AppColors.secondaryColor),
+                  showSelectedLabels: false,
+                  items: _buildBottomNavItems(homeProvider),
+                ),
               ),
             ),
           );
