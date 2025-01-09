@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:stroll_demo/constants/app_colors.dart';
 import 'package:stroll_demo/constants/app_texts.dart';
@@ -7,13 +8,16 @@ import 'package:stroll_demo/views/home/home_screen.dart';
 
 void main() {
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider<HomeProvider>(
-          create: (_) => HomeProvider.instance,
-        ),
-      ],
-      child: const MyApp(),
+    ScreenUtilInit(
+      designSize: const Size(375, 812),
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider<HomeProvider>(
+            create: (_) => HomeProvider.instance,
+          ),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -33,7 +37,7 @@ class MyApp extends StatelessWidget {
             .copyWith(
           secondary: AppColors.secondaryColor,
         ),
-        textTheme: const TextTheme(
+        textTheme: TextTheme(
           bodyLarge: AppTexts.bodyText,
           displayLarge: AppTexts.headline1,
         ),
