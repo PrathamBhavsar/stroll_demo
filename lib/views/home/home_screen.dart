@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:stroll_demo/constants/app_colors.dart';
 import 'package:stroll_demo/constants/app_spaces.dart';
+import 'package:stroll_demo/constants/app_texts.dart';
 import 'package:stroll_demo/views/home/pages/bonfire_page.dart';
 import 'package:stroll_demo/views/home/pages/chats_page.dart';
 import 'package:stroll_demo/views/home/pages/matches/matches_page.dart';
@@ -137,15 +138,54 @@ class HomeScreen extends StatelessWidget {
     ];
 
     return List.generate(4, (index) {
+      String? badgeLabel;
+      if (index == 1) {
+        badgeLabel = '  ';
+      } else if (index == 2) {
+        badgeLabel = '10';
+      }
+
+      Widget iconWidget = SvgPicture.asset(
+        fit: BoxFit.fill,
+        iconPaths[index],
+        color: homeProvider.currentIndex == index
+            ? AppColors.secondaryColor
+            : AppColors.accentColor,
+      );
+
+      if (index == 1 || index == 2) {
+        iconWidget = Stack(
+          clipBehavior: Clip.none,
+          children: [
+            iconWidget,
+            if (badgeLabel != null)
+              Positioned(
+                right: -12,
+                top: -4,
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: AppColors.secondaryColor,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: AppColors.primaryColor,
+                      width: 1.4,
+                    ),
+                  ),
+                  child: Text(
+                    badgeLabel,
+                    style: AppTexts.badgeText,
+                  ),
+                ),
+              ),
+          ],
+        );
+      }
+
       return BottomNavigationBarItem(
-        icon: SvgPicture.asset(
-          fit: BoxFit.fill,
-          iconPaths[index],
-          color: homeProvider.currentIndex == index
-              ? AppColors.secondaryColor
-              : AppColors.accentColor,
-        ),
-        label: _getLabelForIndex(index),
+        icon: iconWidget,
+        label: index == 2 ? _getLabelForIndex(index) : '',
       );
     });
   }

@@ -10,16 +10,24 @@ class AppTexts {
   );
 
   static TextStyle headline1 = TextStyle(
-      fontWeight: FontWeight.w700,
-      fontSize: 34.sp,
-      color: AppColors.textHeaderPurple,
-      shadows: AppColors.titleTextShadows);
+    fontWeight: FontWeight.w700,
+    fontSize: 34.sp,
+    color: AppColors.textHeaderPurple,
+    shadows: AppColors.titleTextShadows,
+  );
+
+  static TextStyle badgeText = TextStyle(
+    fontWeight: FontWeight.w700,
+    color: AppColors.primaryColor,
+    fontSize: 7.sp,
+  );
 
   static TextStyle subHeadline = TextStyle(
-      fontWeight: FontWeight.w600,
-      fontSize: 12.sp,
-      color: AppColors.textHeaderPurple,
-      shadows: AppColors.titleTextShadows);
+    fontWeight: FontWeight.w600,
+    fontSize: 12.sp,
+    color: AppColors.textHeaderPurple,
+    shadows: AppColors.titleTextShadows,
+  );
 
   static TextStyle titleTextStyle = TextStyle(
     fontWeight: FontWeight.w700,
