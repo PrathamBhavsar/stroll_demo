@@ -9,8 +9,8 @@ import 'package:stroll_demo/views/home/pages/matches/widgets/choice_chip_widget.
 import 'package:stroll_demo/views/home/pages/matches/widgets/pick_your_option_widget.dart';
 import 'package:stroll_demo/views/home/pages/matches/widgets/question_widget.dart';
 
-class MatchesPage extends StatelessWidget {
-  const MatchesPage({super.key});
+class BonfirePage extends StatelessWidget {
+  const BonfirePage({super.key});
 
   @override
   Widget build(BuildContext context) {
