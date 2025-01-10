@@ -6,7 +6,7 @@ class AppTexts {
   static TextStyle bodyText = TextStyle(
     fontWeight: FontWeight.w400,
     color: AppColors.textBodyWhite,
-    fontSize: 16.sp,
+    fontSize: 14.sp,
   );
 
   static TextStyle headline1 = TextStyle(
@@ -17,7 +17,7 @@ class AppTexts {
   static TextStyle titleTextStyle = TextStyle(
     fontWeight: FontWeight.w700,
     color: AppColors.textLight,
-    fontSize: 13.sp,
+    fontSize: 11.sp,
   );
 
   static TextStyle quoteTextStyle = TextStyle(
@@ -48,7 +48,7 @@ class AppTexts {
   static TextStyle choiceChipLabelTextStyle({required bool isSelected}) {
     return TextStyle(
       fontWeight: FontWeight.w400,
-      fontSize: 16.sp,
+      fontSize: 14.sp,
       color:
           isSelected ? AppColors.secondaryColor : AppColors.choiceChipLightGrey,
     );
