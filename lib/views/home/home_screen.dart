@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:stroll_demo/constants/app_colors.dart';
 import 'package:stroll_demo/constants/app_spaces.dart';
+import 'package:stroll_demo/constants/app_texts.dart';
 import 'package:stroll_demo/views/home/pages/bonfire_page.dart';
 import 'package:stroll_demo/views/home/pages/chats_page.dart';
 import 'package:stroll_demo/views/home/pages/matches/matches_page.dart';
@@ -35,12 +36,39 @@ class HomeScreen extends StatelessWidget {
               children: [
                 if (homeProvider.currentIndex == 0)
                   Positioned.fill(
-                    child: Image.asset(
-                      'assets/images/matches_background.png',
-                      fit: BoxFit.cover,
+                    child: Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height / 1.8,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/matches_background.png'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.transparent,
+                                Colors.black,
+                                Colors.black,
+                              ],
+                              stops: [
+                                0.0,
+                                0.7,
+                                1.0,
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                // Your existing PageView
                 Padding(
                   padding: AppSpaces.appPadding,
                   child: PageView(
@@ -53,13 +81,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            bottomNavigationBar: SizedBox(
-              height: 80.h,
-              child: Theme(
-                data: Theme.of(context).copyWith(
-                  splashColor: AppColors.secondaryColor.withOpacity(0.2),
-                  highlightColor: Colors.transparent,
-                ),
+            bottomNavigationBar: Theme(
+              data: Theme.of(context).copyWith(
+                splashColor: AppColors.secondaryColor.withOpacity(0.2),
+                highlightColor: Colors.transparent,
+              ),
+              child: Material(
+                color: Theme.of(context).primaryColor,
                 child: BottomNavigationBar(
                   currentIndex: homeProvider.currentIndex,
                   onTap: (index) {
@@ -73,7 +101,7 @@ class HomeScreen extends StatelessWidget {
                   useLegacyColorScheme: true,
                   type: BottomNavigationBarType.fixed,
                   showUnselectedLabels: false,
-                  backgroundColor: Theme.of(context).primaryColor,
+                  backgroundColor: Colors.transparent,
                   selectedItemColor: AppColors.secondaryColor,
                   unselectedItemColor: AppColors.accentColor,
                   selectedIconTheme:
@@ -102,6 +130,7 @@ class HomeScreen extends StatelessWidget {
     return List.generate(4, (index) {
       return BottomNavigationBarItem(
         icon: SvgPicture.asset(
+          fit: BoxFit.fill,
           iconPaths[index],
           color: homeProvider.currentIndex == index
               ? AppColors.secondaryColor

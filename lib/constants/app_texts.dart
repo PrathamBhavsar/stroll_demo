@@ -10,10 +10,50 @@ class AppTexts {
   );
 
   static TextStyle headline1 = TextStyle(
-    fontWeight: FontWeight.bold,
-    fontSize: 32.sp,
+    fontWeight: FontWeight.w700,
+    fontSize: 34.sp,
+    color: AppColors.textHeaderPurple,
+    shadows: [
+      Shadow(
+        offset: const Offset(0, 0),
+        blurRadius: 7.9,
+        color: Colors.black.withOpacity(0.2),
+      ),
+      const Shadow(
+        offset: Offset(0, 0),
+        blurRadius: 2.0,
+        color: Color(0xFFBEBEBE),
+      ),
+      Shadow(
+        offset: const Offset(0, 1),
+        blurRadius: 2.0,
+        color: const Color(0xFF24232F).withOpacity(0.5),
+      ),
+    ],
   );
 
+  static TextStyle subHeadline = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 12.sp,
+    color: AppColors.textHeaderPurple,
+    shadows: [
+      Shadow(
+        offset: const Offset(0, 0),
+        blurRadius: 7.9,
+        color: Colors.black.withOpacity(0.2),
+      ),
+      const Shadow(
+        offset: Offset(0, 0),
+        blurRadius: 2.0,
+        color: Color(0xFFBEBEBE),
+      ),
+      Shadow(
+        offset: const Offset(0, 1),
+        blurRadius: 2.0,
+        color: const Color(0xFF24232F).withOpacity(0.5),
+      ),
+    ],
+  );
   static TextStyle titleTextStyle = TextStyle(
     fontWeight: FontWeight.w700,
     color: AppColors.textLight,
