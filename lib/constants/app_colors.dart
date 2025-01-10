@@ -13,6 +13,10 @@ class AppColors {
   static const Color choiceChipGrey = Color(0xFF232A2E);
   static const Color profileGrey = Color(0xFF0D0F11);
 
+  static const Color shadow1 = Color(0xFFBEBEBE);
+  static const Color shadow2 = Color(0xFF24232F);
+  static const Color boxShadow = Color(0x7A484848);
+
   static List<BoxShadow> choiceChipShadows = [
     BoxShadow(
       color: Colors.black.withOpacity(0.3),
@@ -20,7 +24,7 @@ class AppColors {
       blurRadius: 2,
     ),
     const BoxShadow(
-      color: Color(0x7A484848),
+      color: boxShadow,
       offset: Offset(1, 1),
       blurRadius: 2,
     ),
@@ -28,6 +32,24 @@ class AppColors {
       color: Colors.black.withOpacity(0.3),
       offset: const Offset(2, 2),
       blurRadius: 8,
+    ),
+  ];
+
+  static List<Shadow> titleTextShadows = [
+    Shadow(
+      offset: const Offset(0, 0),
+      blurRadius: 7.9,
+      color: Colors.black.withOpacity(0.2),
+    ),
+    const Shadow(
+      offset: Offset(0, 0),
+      blurRadius: 2.0,
+      color: AppColors.shadow1,
+    ),
+    Shadow(
+      offset: const Offset(0, 1),
+      blurRadius: 2.0,
+      color: AppColors.shadow2.withOpacity(0.5),
     ),
   ];
 

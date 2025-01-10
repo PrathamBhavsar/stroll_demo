@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:stroll_demo/constants/app_colors.dart';
 import 'package:stroll_demo/constants/app_spaces.dart';
-import 'package:stroll_demo/constants/app_texts.dart';
 import 'package:stroll_demo/views/home/pages/bonfire_page.dart';
 import 'package:stroll_demo/views/home/pages/chats_page.dart';
 import 'package:stroll_demo/views/home/pages/matches/matches_page.dart';
 import 'package:stroll_demo/views/home/pages/profile_page.dart';
 import 'package:stroll_demo/providers/home_provider.dart';
-
-import 'dart:async';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
