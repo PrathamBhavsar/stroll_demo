@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:stroll_demo/constants/app_colors.dart';
+import 'package:stroll_demo/constants/app_icons.dart';
 import 'package:stroll_demo/constants/app_spaces.dart';
 import 'package:stroll_demo/constants/app_texts.dart';
 import 'package:stroll_demo/providers/home_provider.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/choice_chip_widget.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/pick_your_option_widget.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/question_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/choice_chip_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/pick_your_option_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/question_widget.dart';
 
 class BonfirePage extends StatelessWidget {
   const BonfirePage({super.key});
@@ -36,17 +37,18 @@ class BonfirePage extends StatelessWidget {
                         ),
                       ),
                       AppSpaces.gapW(10),
-                      Material(
-                        type: MaterialType.circle,
-                        elevation: 4,
-                        animationDuration: const Duration(milliseconds: 500),
-                        shadowColor: AppColors.accentColor.withOpacity(0.7),
-                        color: Colors.transparent,
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 2),
-                          child: SvgPicture.asset(
-                              'assets/icons/dropdown_arrow.svg'),
-                        ),
+                      Icon(
+                        AppIcons.arrow,
+                        size: 10.sp,
+                        color: AppColors.textHeaderPurple,
+                        shadows: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: const Offset(0, 3),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -57,21 +59,22 @@ class BonfirePage extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Material(
-                            type: MaterialType.circle,
-                            elevation: 4,
-                            animationDuration:
-                                const Duration(milliseconds: 500),
-                            shadowColor: AppColors.accentColor.withOpacity(0.7),
-                            color: Colors.transparent,
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 2),
-                              child: SvgPicture.asset('assets/icons/timer.svg'),
-                            ),
+                          Icon(
+                            AppIcons.timer,
+                            size: 16.sp,
+                            color: Colors.white,
+                            shadows: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: const Offset(0, 3),
+                              ),
+                            ],
                           ),
                           AppSpaces.gapW(4),
                           Padding(
-                            padding: const EdgeInsets.all(3.0),
+                            padding: const EdgeInsets.all(3),
                             child: Text(
                               '22h 00m',
                               style: AppTexts.subHeadline,
@@ -82,18 +85,18 @@ class BonfirePage extends StatelessWidget {
                       AppSpaces.gapW(10),
                       Row(
                         children: [
-                          Material(
-                            type: MaterialType.circle,
-                            elevation: 4,
-                            animationDuration:
-                                const Duration(milliseconds: 500),
-                            shadowColor: AppColors.accentColor.withOpacity(0.7),
-                            color: Colors.transparent,
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 2),
-                              child: SvgPicture.asset(
-                                  'assets/icons/profile_light.svg'),
-                            ),
+                          Icon(
+                            AppIcons.user,
+                            size: 16.sp,
+                            color: Colors.white,
+                            shadows: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: const Offset(0, 3),
+                              ),
+                            ],
                           ),
                           AppSpaces.gapW(4),
                           Padding(

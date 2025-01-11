@@ -38,6 +38,9 @@ dependencies:
   flutter_svg: ^2.0.17
   provider: ^6.1.2
   flutter_screenutil: ^5.9.3
+  drop_shadow_image: ^0.9.1
+  fluttericon: ^2.0.0
+  icon_font_generator: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +87,9 @@ flutter:
           style: normal
         - asset: assets/fonts/ProximaNova-RegularIt.ttf
           style: italic
+    - family: icomoon
+      fonts:
+       - asset: assets/fonts/icomoon.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stroll_demo/constants/app_texts.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/profile_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/profile_widget.dart';
 
 class QuestionWidget extends StatelessWidget {
   const QuestionWidget({super.key});
