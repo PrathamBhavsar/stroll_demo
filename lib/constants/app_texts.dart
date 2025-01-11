@@ -25,7 +25,7 @@ class AppTexts {
   static TextStyle subHeadline = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 12.sp,
-    color: AppColors.textHeaderPurple,
+    color: Colors.white,
     shadows: AppColors.titleTextShadows,
   );
 

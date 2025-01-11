@@ -39,7 +39,7 @@ class BonfirePage extends StatelessWidget {
                       AppSpaces.gapW(10),
                       Icon(
                         AppIcons.arrow,
-                        size: 10.sp,
+                        size: 9.sp,
                         color: AppColors.textHeaderPurple,
                         shadows: [
                           BoxShadow(
@@ -52,16 +52,16 @@ class BonfirePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  AppSpaces.gapH(2),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
                             AppIcons.timer,
-                            size: 16.sp,
+                            size: 12.sp,
                             color: Colors.white,
                             shadows: [
                               BoxShadow(
@@ -84,10 +84,11 @@ class BonfirePage extends StatelessWidget {
                       ),
                       AppSpaces.gapW(10),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
                             AppIcons.user,
-                            size: 16.sp,
+                            size: 18.sp,
                             color: Colors.white,
                             shadows: [
                               BoxShadow(
@@ -98,7 +99,6 @@ class BonfirePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          AppSpaces.gapW(4),
                           Padding(
                             padding: const EdgeInsets.all(3.0),
                             child: Text(
