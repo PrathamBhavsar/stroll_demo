@@ -5,7 +5,7 @@ import 'package:stroll_demo/constants/app_colors.dart';
 import 'package:stroll_demo/constants/app_spaces.dart';
 import 'package:stroll_demo/constants/app_texts.dart';
 import 'package:stroll_demo/views/home/pages/chats_page.dart';
-import 'package:stroll_demo/views/home/pages/bonfire/bonfire.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/bonfire_page.dart';
 import 'package:stroll_demo/views/home/pages/matches_page.dart';
 import 'package:stroll_demo/views/home/pages/profile_page.dart';
 import 'package:stroll_demo/providers/home_provider.dart';
