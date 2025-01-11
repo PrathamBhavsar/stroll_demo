@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stroll_demo/constants/app_spaces.dart';
 import 'package:stroll_demo/constants/app_texts.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/circle_button_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/circle_button_widget.dart';
 
 class PickYourOptionWidget extends StatelessWidget {
   const PickYourOptionWidget({super.key});

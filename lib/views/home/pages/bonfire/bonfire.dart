@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:stroll_demo/constants/app_colors.dart';
 import 'package:stroll_demo/constants/app_icons.dart';
 import 'package:stroll_demo/constants/app_spaces.dart';
 import 'package:stroll_demo/constants/app_texts.dart';
 import 'package:stroll_demo/providers/home_provider.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/choice_chip_widget.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/pick_your_option_widget.dart';
-import 'package:stroll_demo/views/home/pages/matches/widgets/question_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/choice_chip_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/pick_your_option_widget.dart';
+import 'package:stroll_demo/views/home/pages/bonfire/widgets/question_widget.dart';
 
 class BonfirePage extends StatelessWidget {
   const BonfirePage({super.key});
@@ -38,8 +39,8 @@ class BonfirePage extends StatelessWidget {
                       AppSpaces.gapW(10),
                       Icon(
                         AppIcons.arrow,
-                        size: 16.sp,
-                        color: Colors.white,
+                        size: 10.sp,
+                        color: AppColors.textHeaderPurple,
                         shadows: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.5),
